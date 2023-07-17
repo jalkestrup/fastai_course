@@ -1,6 +1,7 @@
 #FastAI
 01_deep_learning_intro/elon_or_jackie/*
 02_production/models/*
+secrets/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
