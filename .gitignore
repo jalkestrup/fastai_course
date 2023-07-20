@@ -2,6 +2,8 @@
 01_deep_learning_intro/elon_or_jackie/*
 02_production/models/*
 secrets/*
+06_Paddy_vision/paddy-disease-classification/*
+06_Paddy_vision/paddy-disease-classification.zip
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
