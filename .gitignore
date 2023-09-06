@@ -6,6 +6,8 @@ secrets/*
 06_Paddy_vision/paddy-disease-classification.zip
 10_final_project/plant-pathology-2020-fgvc7/*
 10_final_project/plant-pathology-2020-fgvc7.zip
+10_final_project/models/*
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
