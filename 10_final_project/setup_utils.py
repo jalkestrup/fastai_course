@@ -14,7 +14,7 @@ Author:
 """
 
 
-def check_environment() -> bool:
+def check_environment_import_utils() -> bool:
     """Check if the notebook is running in Google Colab or not.
 
     Returns:
@@ -50,7 +50,7 @@ def set_kaggle_credentials(colab_flag: bool):
         colab_flag (bool): Indicates if the notebook is running in Google Colab.
 
     Returns:
-        None
+        creds if successful, None otherwise.
     """
 
     if colab_flag:
@@ -64,6 +64,12 @@ def set_kaggle_credentials(colab_flag: bool):
     if os.path.exists(file_path):
         with open(file_path) as f:
             creds = json.load(f)
+        # Write credentials to Kaggle folder
+        cred_path = Path("~/.kaggle/kaggle.json").expanduser()
+        cred_path.parent.mkdir(parents=True, exist_ok=True)
+        with open(cred_path, "w") as f:
+            json.dump(creds, f)
+        cred_path.chmod(0o600)
         print("Sucesfully set kaggle credentials")
     else:
         print("Error: File not found, Credentials NOT set")
